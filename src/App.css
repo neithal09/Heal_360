@@ -1,0 +1,21 @@
+/* ============================================================
+   APP COMPONENT STYLES
+   Main wrapper and global app-level styles
+============================================================ */
+
+.App {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure body has no extra margin/padding that could affect layout */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
