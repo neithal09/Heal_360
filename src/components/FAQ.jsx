@@ -101,6 +101,22 @@ const FAQ = () => {
             </span>
           </a>
         </div>
+
+        {/* Final WhatsApp CTA */}
+        <div className="final-whatsapp-cta">
+          <h3>Still have questions?</h3>
+          <p>Talk to us on WhatsApp</p>
+          <a
+            href="https://wa.me/919XXXXXXXXX?text=Hi%2C%20I%20have%20questions%20about%20the%20consultation."
+            className="cta-btn cta-tertiary"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackEvent("CTA_Click_WhatsApp", "faq-final")}
+          >
+            <i className="fab fa-whatsapp"></i>
+            <span className="cta-btn-text">Chat on WhatsApp</span>
+          </a>
+        </div>
       </div>
     </section>
   );

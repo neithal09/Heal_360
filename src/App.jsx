@@ -7,7 +7,7 @@ import WhyHeal360 from "./components/WhyHeal360";
 import DontWaitBand from "./components/DontWaitBand";
 import Testimonials from "./components/Testimonials";
 import FAQ from "./components/FAQ";
-import Footer from "./components/Footer";
+
 import StickyCTA from "./components/StickyCTA";
 import { initUTMPersistence, trackPageView } from "./utils/tracking";
 
@@ -39,7 +39,7 @@ function App() {
       <DontWaitBand />
       <Testimonials />
       <FAQ />
-      <Footer />
+
       <StickyCTA visible={stickyVisible} />
     </div>
   );

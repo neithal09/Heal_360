@@ -376,39 +376,22 @@ button {
     pointer-events: none;
 }
 
-/* Brand Strip */
-.brand-strip {
-    padding: 1.25rem 0;
-    position: relative;
-    z-index: 2;
-}
-.brand-strip-inner {
-    max-width: var(--max-w);
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-.brand-logo {
-    height: 80px;
-    width: auto;
-    display: block;
-}
-
 /* Hero Content */
 .hero-content-wrap {
-    padding: 1rem 0 2rem;
+    padding: 3rem 0 2rem;
     position: relative;
     z-index: 2;
 }
 @media (min-width: 900px) {
     .hero-content-wrap {
-        padding: 2rem 0 3.5rem;
+        padding: 4rem 0 3.5rem;
     }
 }
 
-/* Hero Headline Section - Centered above columns */
+/* Hero Headline Section - Centered */
 .hero-headline-section {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 /* Eyebrow */
@@ -425,20 +408,7 @@ button {
     justify-content: center;
 }
 
-.hero-inner {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    align-items: center;
-}
-@media (min-width: 900px) {
-    .hero-inner {
-        grid-template-columns: 1fr 480px;
-        gap: 5rem;
-    }
-}
-
-/* Hero Copy */
+/* Hero Copy (legacy - kept for potential custom uses) */
 .hero-copy {
     text-align: left;
 }
@@ -466,37 +436,49 @@ button {
 /* Headline */
 .hero-headline {
     font-family: var(--font-display);
-    font-size: clamp(2.1rem, 5.5vw, 3.8rem);
+    font-size: clamp(2.5rem, 6vw, 4.2rem);
     font-weight: 700;
     color: #fff;
     line-height: 1.1;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     text-align: center;
 }
 
-/* Sub headline in left section */
-.hero-headline-sub {
+/* Centered Sub headline */
+.hero-headline-sub-centered {
     font-family: var(--font-display);
-    font-size: clamp(2.1rem, 5.5vw, 3.8rem);
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.1;
-    margin-bottom: 1.1rem;
-    text-align: left;
-}
-.hero-headline-sub em {
-    font-style: italic;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 600;
     color: rgba(255, 255, 255, 0.92);
-    display: block;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Video Centered Wrapper */
+.hero-video-wrap-centered {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Copy Centered Section */
+.hero-copy-centered {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 /* Sub */
 .hero-sub {
-    font-size: clamp(0.95rem, 2vw, 1.12rem);
-    color: rgba(255, 255, 255, 0.8);
+    font-size: clamp(1rem, 2vw, 1.18rem);
+    color: rgba(255, 255, 255, 0.85);
     line-height: 1.7;
     margin-bottom: 1.5rem;
-    max-width: 460px;
 }
 
 /* Trust row */
@@ -508,6 +490,7 @@ button {
     font-weight: 500;
     color: rgba(255, 255, 255, 0.75);
     margin-bottom: 2.25rem;
+    justify-content: center;
 }
 .trust-row i {
     color: rgba(255, 255, 255, 0.9);
@@ -519,19 +502,7 @@ button {
     display: flex;
     flex-direction: column;
     gap: 0.85rem;
-    align-items: flex-start;
-}
-
-/* Hero Video */
-.hero-video-wrap {
-    position: relative;
-    z-index: 1;
-    padding-top: 2rem;
-}
-@media (min-width: 900px) {
-    .hero-video-wrap {
-        padding-top: 3rem;
-    }
+    align-items: center;
 }
 
 .video-container {
@@ -734,8 +705,8 @@ button {
     .video-badge {
         display: none;
     }
-    .hero-video-wrap {
-        margin: 0 0.5rem;
+    .hero-video-wrap-centered {
+        margin: 0 0.5rem 3rem;
     }
 }
 
@@ -903,7 +874,7 @@ button {
 }
 
 .hiw-track {
-    max-width: 700px;
+    max-width: 900px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -912,17 +883,28 @@ button {
 }
 
 .hiw-step {
-    display: grid;
-    grid-template-columns: 64px 1fr;
-    gap: 0;
+    display: flex;
+    flex-direction: column;
     position: relative;
     z-index: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--r-lg);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s var(--ease);
+}
+
+.hiw-step:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
 }
 
 .hiw-step-icon {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .hiw-icon-circle {
@@ -938,6 +920,7 @@ button {
     z-index: 1;
     position: relative;
     transition: transform 0.3s var(--ease);
+    margin-right: 1rem;
 }
 
 .hiw-icon-circle i {
@@ -951,17 +934,11 @@ button {
 }
 
 .hiw-connector {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 6px 0;
-    color: rgba(255, 255, 255, 0.3);
-    font-size: 0.9rem;
+    display: none;
 }
 
 .hiw-step-body {
-    padding: 0.2rem 0 2.5rem 1.75rem;
+    padding: 0;
 }
 .hiw-step-num {
     font-size: 0.7rem;
@@ -1499,135 +1476,60 @@ button {
 }
 
 .faq-cta {
+    text-align: center;
     margin-top: 2.5rem;
+}
+
+/* Final WhatsApp CTA */
+.final-whatsapp-cta {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 3rem 2rem;
+    background: rgba(37, 211, 102, 0.08);
+    border: 2px solid rgba(37, 211, 102, 0.2);
+    border-radius: var(--r-lg);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.final-whatsapp-cta h3 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.final-whatsapp-cta p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.final-whatsapp-cta .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--wa);
+    border-color: var(--wa);
+    color: #fff;
+}
+
+.final-whatsapp-cta .cta-btn:hover {
+    background: #1fa855;
+    border-color: #1fa855;
+    transform: translateY(-2px);
+}
+
+.final-whatsapp-cta .cta-btn i {
+    font-size: 1.4rem;
 }
 
 /* ============================================================
    FOOTER
 ============================================================ */
-.site-footer {
-    background: var(--text-dark);
-}
-
-.footer-top {
-    padding: 4rem 0 3rem;
-}
-.footer-top-inner {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-}
-@media (min-width: 640px) {
-    .footer-top-inner {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-@media (min-width: 1024px) {
-    .footer-top-inner {
-        grid-template-columns: 1.8fr 1fr 1fr 1.6fr;
-    }
-}
-
-.footer-brand .footer-logo {
-    height: 56px;
-    width: auto;
-    filter: brightness(0) invert(1);
-    opacity: 0.9;
-    margin-bottom: 1rem;
-}
-.footer-brand p {
-    font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.5);
-    line-height: 1.7;
-}
-
-.footer-links-col h5 {
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.45);
-    margin-bottom: 1rem;
-}
-.footer-links-col ul {
-    display: flex;
-    flex-direction: column;
-    gap: 0.55rem;
-}
-.footer-links-col a {
-    font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.6);
-    transition: color 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-.footer-links-col a:hover {
-    color: #fff;
-}
-.footer-links-col a i {
-    font-size: 0.9rem;
-    color: var(--brand);
-}
-
-/* WhatsApp footer CTA */
-.footer-wa-col h5 {
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.45);
-    margin-bottom: 1rem;
-}
-.wa-footer-btn {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background: rgba(37, 211, 102, 0.12);
-    border: 1.5px solid rgba(37, 211, 102, 0.3);
-    border-radius: var(--r-md);
-    padding: 1.1rem 1.25rem;
-    transition:
-        background 0.25s,
-        border-color 0.25s,
-        transform 0.25s;
-    cursor: pointer;
-}
-.wa-footer-btn:hover {
-    background: rgba(37, 211, 102, 0.2);
-    border-color: var(--wa);
-    transform: translateY(-2px);
-}
-.wa-footer-btn > i {
-    font-size: 1.75rem;
-    color: var(--wa);
-    flex-shrink: 0;
-}
-.wa-footer-btn strong {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: #fff;
-}
-.wa-footer-btn span {
-    font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.55);
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.07);
-    padding: 1.5rem 0;
-    text-align: center;
-}
-.footer-bottom p {
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.35);
-    line-height: 1.7;
-}
-.footer-disclaimer {
-    margin-top: 0.25rem;
-    font-size: 0.72rem;
-}
+/* Footer removed - using final WhatsApp CTA instead */
 
 /* ============================================================
    STICKY CTA
@@ -1799,11 +1701,11 @@ button {
     animation: fadeInDown 0.8s ease-out;
 }
 
-.hero-copy {
+.hero-video-wrap-centered {
     animation: fadeInUp 1s ease-out 0.2s both;
 }
 
-.hero-video-wrap {
+.hero-copy-centered {
     animation: fadeInUp 1s ease-out 0.4s both;
 }
 
@@ -1907,11 +1809,6 @@ button {
 .why-card,
 .testi-card {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Smooth entrance for brand logo */
-.brand-logo {
-    animation: fadeInDown 0.6s ease-out;
 }
 
 /* Trust badges float animation */
@@ -2034,36 +1931,48 @@ button {
 .for-section::before {
     content: "👶";
     position: absolute;
-    font-size: 4rem;
-    top: 10%;
-    right: 5%;
+    font-size: 5rem;
+    top: 8%;
+    right: 8%;
     animation: babyBounce 3s ease-in-out infinite;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.for-section::after {
+    content: "👶";
+    position: absolute;
+    font-size: 4.5rem;
+    bottom: 12%;
+    left: 5%;
+    animation: babyBounce 4s ease-in-out infinite 1.5s;
     opacity: 0.3;
     pointer-events: none;
     z-index: 0;
 }
 
 .why-section::after {
-    content: "🍼";
+    content: "👶";
     position: absolute;
-    font-size: 3.5rem;
+    font-size: 4rem;
     bottom: 15%;
     left: 5%;
     animation: babyBounce 4s ease-in-out infinite 1s;
-    opacity: 0.25;
+    opacity: 0.5;
     pointer-events: none;
     z-index: 0;
 }
 
 .testi-section::before {
-    content: "✨";
+    content: "👶";
     position: absolute;
-    font-size: 2.5rem;
-    top: 15%;
-    right: 8%;
-    animation: sparkle 3s ease-in-out infinite;
+    font-size: 4rem;
+    top: 12%;
+    right: 6%;
+    animation: babyBounce 3.5s ease-in-out infinite;
     pointer-events: none;
-    opacity: 0.8;
+    opacity: 0.5;
     z-index: 0;
 }
 
@@ -2086,40 +1995,17 @@ button {
     animation: sparkle 2s ease-in-out infinite;
 }
 
-/* Subtle heart pulse on hover for cards */
-.for-card:hover::after,
-.why-card:hover::after {
-    content: "💗";
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    font-size: 1.5rem;
-    animation: heartBeat 0.6s ease-in-out;
-    pointer-events: none;
-}
+/* Remove hover heart effect that looks broken */
 
-/* Baby footprints decoration */
-.dont-wait-band::before {
+/* Footprint decoration for FAQ section */
+.faq-section::after {
     content: "👣";
     position: absolute;
-    font-size: 3rem;
-    top: 20%;
-    left: 3%;
+    font-size: 4rem;
+    top: 12%;
+    right: 6%;
     opacity: 0.4;
     animation: footprintWalk 15s linear infinite;
-    pointer-events: none;
-    z-index: 0;
-}
-
-/* Add joy to FAQ section */
-.faq-section::after {
-    content: "🎀";
-    position: absolute;
-    font-size: 3.5rem;
-    top: 10%;
-    right: 5%;
-    animation: babyBounce 5s ease-in-out infinite;
-    opacity: 0.25;
     pointer-events: none;
     z-index: 0;
 }
@@ -2185,14 +2071,28 @@ button {
     .hero-headline {
         font-size: 2rem;
     }
+    .hero-headline-sub-centered {
+        font-size: 1.5rem;
+    }
+    .hiw-step {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
     .hiw-step-body {
-        padding-bottom: 2rem;
+        padding: 0;
     }
     .hiw-endpoint {
         padding: 1.5rem;
     }
     .dont-wait-inner {
         gap: 1.5rem;
+    }
+    .final-whatsapp-cta {
+        padding: 2rem 1.5rem;
+        margin-top: 3rem;
+    }
+    .final-whatsapp-cta h3 {
+        font-size: 1.5rem;
     }
 }
 

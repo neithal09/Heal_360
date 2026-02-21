@@ -4,7 +4,6 @@
    ============================================================ */
 import { useState } from "react";
 import { trackEvent } from "../utils/tracking";
-import logo from "../assets/logo.png";
 
 const Hero = () => {
   const [videoPlaying, setVideoPlaying] = useState(false);
@@ -21,13 +20,6 @@ const Hero = () => {
 
   return (
     <section className="hero" id="hero">
-      {/* Brand Logo Strip */}
-      <div className="brand-strip">
-        <div className="brand-strip-inner">
-          <img src={logo} alt="Heal360 Wellness" className="brand-logo" />
-        </div>
-      </div>
-
       {/* Hero Content */}
       <div className="hero-content-wrap">
         <div className="container">
@@ -40,117 +32,111 @@ const Hero = () => {
             </div>
 
             <h1 className="hero-headline">Trying to Conceive?</h1>
+
+            <h2 className="hero-headline-sub-centered">
+              Overcome Infertility Naturally
+            </h2>
           </div>
 
-          <div className="hero-inner">
-            {/* Left: Copy */}
-            <div className="hero-copy">
-              <h2 className="hero-headline-sub">
-                <em>
-                  Overcome Infertility
-                  <br />
-                  Naturally in 90 Days.
-                </em>
-              </h2>
-
-              <p className="hero-sub">
-                A structured, couple-first consultation that gives you a clear
-                plan — not another opinion. Private. Online. Action-focused.
-              </p>
-
-              <div className="trust-row">
-                <span>
-                  <i className="fas fa-shield-halved"></i> Fully refundable
-                  booking
-                </span>
-                <span>
-                  <i className="fas fa-lock"></i> 100% private
-                </span>
-                <span>
-                  <i className="fas fa-video"></i> Google Meet
-                </span>
-              </div>
-
-              {/* Animated CTA Stack */}
-              <div className="cta-stack">
-                <a
-                  href="https://pages.razorpay.com/rev199"
-                  className="cta-btn cta-tertiary"
-                  onClick={() => handleBookingClick("hero-3")}
-                >
-                  <span className="cta-btn-text">
-                    Book Your Wellness Assessment
-                  </span>
-                  <span className="cta-btn-badge">Limited Slots</span>
-                </a>
-              </div>
-            </div>
-
-            {/* Right: Video */}
-            <div className="hero-video-wrap">
-              <div className="video-container">
-                {!videoPlaying ? (
-                  <div className="video-thumbnail" onClick={handlePlayVideo}>
-                    <div
-                      className="video-thumb-bg"
-                      style={{
-                        backgroundImage:
-                          "url(https://img.youtube.com/vi/yzdZKjmb80s/maxresdefault.jpg)",
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                      }}
-                    >
-                      <div className="video-thumb-overlay">
-                        <div className="play-btn" aria-label="Play video">
-                          <i className="fas fa-play"></i>
-                        </div>
-                        <div className="video-label">
-                          <p className="video-title">
-                            Watch: Dr. Tahera's Approach
-                          </p>
-                          <p className="video-duration">
-                            <i className="fas fa-clock"></i> 3 min
-                          </p>
-                        </div>
+          {/* Video Section - Placed First */}
+          <div className="hero-video-wrap-centered">
+            <div className="video-container">
+              {!videoPlaying ? (
+                <div className="video-thumbnail" onClick={handlePlayVideo}>
+                  <div
+                    className="video-thumb-bg"
+                    style={{
+                      backgroundImage:
+                        "url(https://img.youtube.com/vi/yzdZKjmb80s/maxresdefault.jpg)",
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
+                  >
+                    <div className="video-thumb-overlay">
+                      <div className="play-btn" aria-label="Play video">
+                        <i className="fas fa-play"></i>
+                      </div>
+                      <div className="video-label">
+                        <p className="video-title">
+                          Watch: Dr. Tahera's Approach
+                        </p>
+                        <p className="video-duration">
+                          <i className="fas fa-clock"></i> 3 min
+                        </p>
                       </div>
                     </div>
                   </div>
-                ) : (
-                  <iframe
-                    id="heroVideo"
-                    className="hero-video"
-                    src="https://www.youtube.com/embed/yzdZKjmb80s?autoplay=1"
-                    title="Dr. Tahera's Approach"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    style={{ display: "block" }}
-                  ></iframe>
-                )}
-              </div>
+                </div>
+              ) : (
+                <iframe
+                  id="heroVideo"
+                  className="hero-video"
+                  src="https://www.youtube.com/embed/yzdZKjmb80s?autoplay=1"
+                  title="Dr. Tahera's Approach"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{ display: "block" }}
+                ></iframe>
+              )}
+            </div>
 
-              {/* Floating Trust Badges around video */}
-              <div className="video-badge badge-1">
-                <i className="fas fa-users"></i>
-                <div>
-                  <strong>500+</strong>
-                  <span>Couples Supported</span>
-                </div>
+            {/* Floating Trust Badges around video */}
+            <div className="video-badge badge-1">
+              <i className="fas fa-users"></i>
+              <div>
+                <strong>500+</strong>
+                <span>Couples Supported</span>
               </div>
-              <div className="video-badge badge-2">
-                <i className="fas fa-globe"></i>
-                <div>
-                  <strong>15+ Countries</strong>
-                  <span>Worldwide</span>
-                </div>
+            </div>
+            <div className="video-badge badge-2">
+              <i className="fas fa-globe"></i>
+              <div>
+                <strong>15+ Countries</strong>
+                <span>Worldwide</span>
               </div>
-              <div className="video-badge badge-3">
-                <i className="fas fa-star"></i>
-                <div>
-                  <strong>4.9 ★</strong>
-                  <span>Client Rating</span>
-                </div>
+            </div>
+            <div className="video-badge badge-3">
+              <i className="fas fa-star"></i>
+              <div>
+                <strong>4.9 ★</strong>
+                <span>Client Rating</span>
               </div>
+            </div>
+          </div>
+
+          {/* Copy Section - After Video */}
+          <div className="hero-copy-centered">
+            <p className="hero-sub">
+              A structured, couple-first consultation that gives you a clear
+              plan — not another opinion. Private. Online. Action-focused.
+            </p>
+
+            <div className="trust-row">
+              <span>
+                <i className="fas fa-shield-halved"></i> Fully refundable
+                booking
+              </span>
+              <span>
+                <i className="fas fa-lock"></i> 100% private
+              </span>
+              <span>
+                <i className="fas fa-video"></i> Google Meet
+              </span>
+            </div>
+
+            {/* Animated CTA Stack */}
+            <div className="cta-stack">
+              <a
+                href="https://pages.razorpay.com/rev199"
+                className="cta-btn cta-tertiary"
+                onClick={() => handleBookingClick("hero-3")}
+              >
+                <span className="cta-btn-text">
+                  Book Your Wellness Assessment
+                </span>
+                <span className="cta-btn-badge">Limited Slots</span>
+              </a>
             </div>
           </div>
         </div>
