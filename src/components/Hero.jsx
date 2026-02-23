@@ -31,9 +31,7 @@ const Hero = () => {
               Overcome Infertility Naturally
             </h2>
             <div className="hero-eyebrow">
-              <span className="dot-pulse"></span>
-              Natural Fertility Support &nbsp;·&nbsp; Online &nbsp;·&nbsp;
-              Private
+              <span>Natural Fertility Support · Online · Private</span>
             </div>
           </div>
 
