@@ -57,9 +57,6 @@ const WhyHeal360 = () => {
               </div>
               <h3>{feature.title}</h3>
               <p dangerouslySetInnerHTML={{ __html: feature.description }}></p>
-              {feature.featured && (
-                <div className="why-card-badge">Most Popular</div>
-              )}
             </div>
           ))}
         </div>

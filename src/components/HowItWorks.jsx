@@ -95,15 +95,6 @@ const HowItWorks = () => {
           </div>
         </div>
 
-        <div className="hiw-refund-note">
-          <i className="fas fa-shield-check"></i>
-          <span>
-            Booking amount is <strong>fully refundable</strong> if you attend
-            the appointment &nbsp;·&nbsp; Rescheduling available within policy
-            window
-          </span>
-        </div>
-
         <div className="hiw-cta">
           <a
             href="https://pages.razorpay.com/rev199"

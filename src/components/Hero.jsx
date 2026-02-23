@@ -80,6 +80,8 @@ const Hero = () => {
                 ></iframe>
               )}
             </div>
+
+            {/* Single Decorative Emoji */}
           </div>
 
           {/* Copy Section - After Video */}
@@ -88,19 +90,6 @@ const Hero = () => {
               A structured, couple-first consultation that gives you a clear
               plan — not another opinion. Private. Online. Action-focused.
             </p>
-
-            <div className="trust-row">
-              <span>
-                <i className="fas fa-shield-halved"></i> Fully refundable
-                booking
-              </span>
-              <span>
-                <i className="fas fa-lock"></i> 100% private
-              </span>
-              <span>
-                <i className="fas fa-video"></i> Google Meet
-              </span>
-            </div>
 
             {/* Animated CTA Stack */}
             <div className="cta-stack">
@@ -114,6 +103,19 @@ const Hero = () => {
                 </span>
                 <span className="cta-btn-badge">Limited Slots</span>
               </a>
+            </div>
+
+            <div className="trust-row">
+              <span>
+                <i className="fas fa-shield-halved"></i> Fully refundable
+                booking
+              </span>
+              <span>
+                <i className="fas fa-lock"></i> 100% private
+              </span>
+              <span>
+                <i className="fas fa-video"></i> Google Meet
+              </span>
             </div>
           </div>
         </div>
