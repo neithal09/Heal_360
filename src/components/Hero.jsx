@@ -80,29 +80,6 @@ const Hero = () => {
                 ></iframe>
               )}
             </div>
-
-            {/* Floating Trust Badges around video */}
-            <div className="video-badge badge-1">
-              <i className="fas fa-users"></i>
-              <div>
-                <strong>500+</strong>
-                <span>Couples Supported</span>
-              </div>
-            </div>
-            <div className="video-badge badge-2">
-              <i className="fas fa-globe"></i>
-              <div>
-                <strong>15+ Countries</strong>
-                <span>Worldwide</span>
-              </div>
-            </div>
-            <div className="video-badge badge-3">
-              <i className="fas fa-star"></i>
-              <div>
-                <strong>4.9 ★</strong>
-                <span>Client Rating</span>
-              </div>
-            </div>
           </div>
 
           {/* Copy Section - After Video */}

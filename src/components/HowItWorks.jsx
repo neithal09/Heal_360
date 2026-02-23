@@ -66,7 +66,7 @@ const HowItWorks = () => {
                   aria-hidden="true"
                 >
                   {index < steps.length - 1 && (
-                    <i className="fas fa-chevron-down"></i>
+                    <i className="fas fa-chevron-right"></i>
                   )}
                 </div>
               </div>

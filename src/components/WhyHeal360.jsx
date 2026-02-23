@@ -3,6 +3,7 @@
    Section displaying key differentiators and founder information
    ============================================================ */
 import { useScrollRevealChildren } from "../hooks/useScrollReveal";
+import drTaheraImage from "../assets/dr.tahera.webp";
 
 const WhyHeal360 = () => {
   const gridRef = useScrollRevealChildren(".why-card");
@@ -65,10 +66,12 @@ const WhyHeal360 = () => {
 
         {/* Founder Block */}
         <div className="founder-block">
-          <div className="founder-avatar-wrap" aria-hidden="true">
-            <div className="founder-avatar-circle">
-              <i className="fas fa-user-doctor"></i>
-            </div>
+          <div className="founder-avatar-wrap">
+            <img
+              src={drTaheraImage}
+              alt="Dr. Tahera Khaledi - Founder of Heal360 Wellness"
+              className="founder-avatar-image"
+            />
             <div className="founder-avatar-ring"></div>
           </div>
           <div className="founder-text">
