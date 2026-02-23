@@ -32,7 +32,7 @@ const HowItWorks = () => {
       icon: "fas fa-map-location-dot",
       title: "Get Your Plan",
       description:
-        "Walk away with a personalised roadmap — habits, routines, priorities — not generic advice. Your plan, your pace.",
+        "Walk away with a personalised roadmap habits, routines, priorities not generic advice. Your plan, your pace.",
     },
     {
       id: 4,

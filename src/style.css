@@ -895,7 +895,7 @@ button {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     position: relative;
-    align-items: start;
+    align-items: stretch;
 }
 
 .hiw-step {
@@ -910,6 +910,8 @@ button {
     border-radius: var(--r-lg);
     padding: 2rem 1.5rem;
     transition: all 0.3s var(--ease);
+    min-height: 280px;
+    height: 100%;
 }
 
 .hiw-step::after {
