@@ -25,17 +25,16 @@ const Hero = () => {
         <div className="container">
           {/* Centered Headline Section */}
           <div className="hero-headline-section">
-            <div className="hero-eyebrow">
-              <span className="dot-pulse"></span>
-              Natural Fertility Support &nbsp;·&nbsp; Online &nbsp;·&nbsp;
-              Private
-            </div>
-
             <h1 className="hero-headline">Trying to Conceive?</h1>
 
             <h2 className="hero-headline-sub-centered">
               Overcome Infertility Naturally
             </h2>
+            <div className="hero-eyebrow">
+              <span className="dot-pulse"></span>
+              Natural Fertility Support &nbsp;·&nbsp; Online &nbsp;·&nbsp;
+              Private
+            </div>
           </div>
 
           {/* Video Section - Placed First */}
